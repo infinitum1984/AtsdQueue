@@ -1,9 +1,15 @@
 import com.google.api.services.sheets.v4.Sheets
 import com.google.api.services.sheets.v4.model.ValueRange
-class MarksReader(val mainSheet: Sheets, val spreadsheetId: String) {
-    var lisGroups = arrayListOf<Group>()
-    init {
+import models.Group
+import models.Student
 
+object Marks {
+    private var lisGroups = arrayListOf<Group>()
+    private lateinit var mainSheet: Sheets;
+    private lateinit var spreadsheetId: String;
+    public fun fillMarks(mainSheet: Sheets, spreadsheetId: String){
+        this.mainSheet=mainSheet
+        this.spreadsheetId=spreadsheetId
         for (i in 1..10){
             lisGroups.add(readGroup(i.toString()))
         }
@@ -62,19 +68,7 @@ class MarksReader(val mainSheet: Sheets, val spreadsheetId: String) {
 
 
 
-    class Student(val name: String, val group: String,val numLabs:Int, val can:Boolean,val type: String, var wantLabs: String="", var wantMark: String=""){
-        override fun toString(): String {
-            var can_s="Допущений"
-            if (!can){
-                can_s="Не допущений"
-            }
 
-            return "${name} ${group} ${can_s} (num labs: ${numLabs}) ${type} ${wantMark}"
 
-        }
-    }
-    class Group(val name:String){
-        var ListStudets = arrayListOf<Student>()
-    }
 
 }

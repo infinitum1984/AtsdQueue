@@ -1,5 +1,4 @@
-﻿import MarksReader.Student
-import com.google.api.client.auth.oauth2.Credential
+﻿import com.google.api.client.auth.oauth2.Credential
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp
 import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow
@@ -13,6 +12,7 @@ import com.google.api.services.sheets.v4.Sheets
 import com.google.api.services.sheets.v4.SheetsScopes
 import com.google.api.services.sheets.v4.model.BatchUpdateValuesRequest
 import com.google.api.services.sheets.v4.model.ValueRange
+import models.Student
 import java.io.*
 import java.security.GeneralSecurityException
 import java.util.*
@@ -22,29 +22,20 @@ private val JSON_FACTORY: JsonFactory = JacksonFactory.getDefaultInstance()
 private const val TOKENS_DIRECTORY_PATH = "tokens"
 
 
-private const val outSpreadSheetID = "1dN3s9kB2oePMgutAp-0hvGNtD6ygYGObMScsguAgzHk"
+private const val outSpreadSheetID = "1CEvp1lgf72zKhkjo0RiWd0ZJLIvuUMxtl66yGLbXSn0"
 private const val inputSpreadSheetID = "1wx6fidB0RhF8B4J6XWPFnA1fxv5wKUq05bbwYaxiHwY"
 private const val marksSpreadSheetID = "1A6kB9EBR0vUhli9mYFv9pamWe6pa0VBIdU5aLTn6LVg"
 
 private var mService: Sheets? = null
-/**
- * Global instance of the scopes required by this quickstart.
- * If modifying these scopes, delete your previously saved tokens/ folder.
- */
+
 private val SCOPES = listOf(
     SheetsScopes.SPREADSHEETS
 )
 private const val CREDENTIALS_FILE_PATH = "/credentials.json"
 
-/**
- * Creates an authorized Credential object.
- * @param HTTP_TRANSPORT The network HTTP Transport.
- * @return An authorized Credential object.
- * @throws IOException If the credentials.json file cannot be found.
- */
 @Throws(IOException::class)
 private  fun getCredentials(HTTP_TRANSPORT: NetHttpTransport): Credential? { // Load client secrets.
-    val inputData = SheetsMain::class.java.getResourceAsStream(CREDENTIALS_FILE_PATH)
+    val inputData = Student::class.java.getResourceAsStream(CREDENTIALS_FILE_PATH)
         ?: throw FileNotFoundException("Resource not found: $CREDENTIALS_FILE_PATH")
     val clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, InputStreamReader(inputData))
     // Build flow and trigger user authorization request.
@@ -66,6 +57,11 @@ private  fun getCredentials(HTTP_TRANSPORT: NetHttpTransport): Credential? { // 
 fun main(args: Array<String>) {
     mService = getSheeService()
     readStudents()
+
+    val name = "Danya"
+
+
+
 }
 
 @Throws(GeneralSecurityException::class, IOException::class)
@@ -81,14 +77,17 @@ fun readStudents() { // Build a new authorized API client service.
     val HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport()
     val spreadsheetId = inputSpreadSheetID
     val range = "students!C:F"
+
     val service = Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
         .setApplicationName(APPLICATION_NAME)
         .build()
+
     val response = service.spreadsheets().values()[spreadsheetId, range]
         .execute()
     val values = response.getValues()
     System.setOut(PrintStream(System.out, true, "UTF-8"))
-    val reader = MarksReader(mService!!, marksSpreadSheetID)
+    val reader = Marks
+    reader.fillMarks(mService!!, marksSpreadSheetID)
     val queueStudents = ArrayList<Student>()
     val tmpStudents = ArrayList<Student>()
     val cantStudents = ArrayList<Student>()
@@ -181,7 +180,7 @@ fun writeList(values: ArrayList<List<Any?>>?) {
         ArrayList()
     data.add(
         ValueRange()
-            .setRange("queue2!A:E")
+            .setRange("queue!A:E")
             .setValues(values)
     )
     val body = BatchUpdateValuesRequest()
