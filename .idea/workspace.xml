@@ -19,7 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3e5bdbb-03ae-469e-aa93-7034733a081b" name="Default Changelist" comment="refactoring" />
+    <list default="true" id="f3e5bdbb-03ae-469e-aa93-7034733a081b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/MySheets.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StudentsQueue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/register_format.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/register_format.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/MainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Marks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Marks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Marks.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Marks.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Orders.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Orders.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SheetsWorker.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokens/StoredCredential" beforeDir="false" afterPath="$PROJECT_DIR$/tokens/StoredCredential" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,14 +47,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Kotlin File" />
-        <option value="Kotlin Object" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1cDthU7ooZhIFDQiXRCj8joCPa7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -65,7 +79,7 @@
       <recent name="C:\Development\algorithms\register_format" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Kotlin.StudentsQueueKt">
     <configuration name="SheetsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SheetsMain" />
       <module name="register_format.main" />
@@ -92,7 +106,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="register_format.main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -105,13 +119,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentsQueueKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="register_format.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="StudentsQueueKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.StudentsQueueKt" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.register_format [compileKotlin]" />
         <item itemvalue="Application.SheetsMain" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -124,14 +164,6 @@
       <option name="presentableId" value="Default" />
       <updated>1590075110759</updated>
     </task>
-    <task id="LOCAL-00001" summary="refactoring">
-      <created>1590865631298</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1590865631298</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,16 +171,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590075722783">
@@ -172,39 +201,43 @@
     </state>
     <state x="512" y="144" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590774683068" />
     <state x="719" y="206" key="FileChooserDialogImpl/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590081021729" />
-    <state width="1323" height="85" key="GridCell.Tab.0.bottom" timestamp="1590779814911">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="175" key="GridCell.Tab.0.bottom" timestamp="1590929672500">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="85" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590779814911" />
     <state width="1877" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590684960642" />
-    <state width="1877" height="188" key="GridCell.Tab.0.bottom/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590680931078" />
-    <state width="1323" height="85" key="GridCell.Tab.0.center" timestamp="1590779814910">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="175" key="GridCell.Tab.0.bottom/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590929672500" />
+    <state width="1877" height="175" key="GridCell.Tab.0.center" timestamp="1590929672500">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="85" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590779814910" />
     <state width="1877" height="188" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590684960642" />
-    <state width="1877" height="188" key="GridCell.Tab.0.center/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590680931078" />
-    <state width="1323" height="85" key="GridCell.Tab.0.left" timestamp="1590779814910">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="175" key="GridCell.Tab.0.center/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590929672500" />
+    <state width="1877" height="175" key="GridCell.Tab.0.left" timestamp="1590929672500">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="85" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590779814910" />
     <state width="1877" height="188" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590684960642" />
-    <state width="1877" height="188" key="GridCell.Tab.0.left/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590680931078" />
-    <state width="1323" height="85" key="GridCell.Tab.0.right" timestamp="1590779814910">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1877" height="175" key="GridCell.Tab.0.left/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590929672500" />
+    <state width="1877" height="175" key="GridCell.Tab.0.right" timestamp="1590929672500">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="85" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590779814910" />
     <state width="1877" height="188" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590684960642" />
-    <state width="1877" height="188" key="GridCell.Tab.0.right/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590680931078" />
+    <state width="1877" height="175" key="GridCell.Tab.0.right/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590929672500" />
+    <state x="672" y="235" key="MultipleFileMergeDialog" timestamp="1590924643891">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="235" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590924643891" />
     <state x="313" y="0" key="SettingsEditor" timestamp="1590774819397">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="313" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590774819397" />
     <state x="440" y="94" key="SettingsEditor/1920.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1590090335296" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1590865663387">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591020817293">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590865663387" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591020817293" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590084774215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

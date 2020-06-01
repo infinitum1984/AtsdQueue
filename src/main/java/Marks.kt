@@ -7,7 +7,7 @@ object Marks {
     private var lisGroups = arrayListOf<Group>()
     private lateinit var mainSheet: Sheets;
     private lateinit var spreadsheetId: String;
-    public fun fillMarks(mainSheet: Sheets, spreadsheetId: String){
+    fun fillMarks(mainSheet: Sheets, spreadsheetId: String){
         this.mainSheet=mainSheet
         this.spreadsheetId=spreadsheetId
         for (i in 1..10){
@@ -65,10 +65,6 @@ object Marks {
     private fun getGroupNum(group: String):String{
             return group.substring(group.lastIndexOf("-")+1,group.length)
     }
-
-
-
-
 
 
 }
