@@ -6,7 +6,7 @@ import java.util.*
 
 class Orders(val service:Sheets, val sheetId:String) {
 
-    private val RANGE = "students!C:F"
+    private val RANGE = "students!A:C"
 
     lateinit var queueAny:ArrayList<List<Any?>>
     lateinit var queueStudents: ArrayList<Student>;
@@ -34,7 +34,7 @@ class Orders(val service:Sheets, val sheetId:String) {
                 try {
                     val stud = reader.getStudent(values[i][0].toString(), values[i][1].toString())
                     stud.wantLabs = values[i][2].toString()
-                    stud.wantMark = values[i][3].toString()
+                   // stud.wantMark = values[i][3].toString()
                     val numLabs = stud.numLabs
                     if (numLabs == -1) {
                         tmpStudents.add(stud)
@@ -117,17 +117,17 @@ class Orders(val service:Sheets, val sheetId:String) {
                 }
             }
         }
-        for (i in queue.indices) {
-            for (j in 0 until queue.size - 1) {
-                if (queue[j].numLabs == queue[j + 1].numLabs) {
-                    if (queue[j].group!="КІУКІ-19-5" && queue[j + 1].group=="КІУКІ-19-5") {
-                        val tmp = queue[j]
-                        queue[j] = queue[j + 1]
-                        queue[j + 1] = tmp
-                    }
-                }
-            }
-        }
+//        for (i in queue.indices) {
+//            for (j in 0 until queue.size - 1) {
+//                if (queue[j].numLabs == queue[j + 1].numLabs) {
+//                    if (queue[j].group!="КІУКІ-19-5" && queue[j + 1].group=="КІУКІ-19-5") {
+//                        val tmp = queue[j]
+//                        queue[j] = queue[j + 1]
+//                        queue[j + 1] = tmp
+//                    }
+//                }
+//            }
+//        }
     }
 
 

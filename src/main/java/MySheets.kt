@@ -26,9 +26,9 @@ object MySheets {
     private const val TOKENS_DIRECTORY_PATH = "tokens"
 
 
-     const val OUT_SPREADSHEET_ID = "1CEvp1lgf72zKhkjo0RiWd0ZJLIvuUMxtl66yGLbXSn0"
-     const val INPUT_SPREADSHEET_ID = "1wx6fidB0RhF8B4J6XWPFnA1fxv5wKUq05bbwYaxiHwY"
-     const val MARKS_SPREADSHEET_ID = "1A6kB9EBR0vUhli9mYFv9pamWe6pa0VBIdU5aLTn6LVg"
+     const val OUT_SPREADSHEET_ID = "1vc973GbKQDt3wmhAPyfjwpkx_kIwBIOnrCbm0IqoXhg"
+     const val INPUT_SPREADSHEET_ID = "1sqxP_qCWby6zS5yDqM85ZFSoALGNZMvCAmS5pOaiV0I"
+     const val MARKS_SPREADSHEET_ID = "1A2N0a5cyVqCE33-TtyuJsGKVVH-MLlLBhvCxCYnMgG8"
 
     private var mService: Sheets? = null
 
